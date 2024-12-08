@@ -1,0 +1,80 @@
+= CalConnect Standard: (TITLE)
+
+This work item belongs to CalConnect (TCs).
+
+image:https://github.com/CalConnect/cc-vcard-schedulable/workflows/generate/badge.svg["Build Status", link="https://github.com/CalConnect/cc-vcard-schedulable/actions?workflow=generate"]
+
+This document is available in its rendered forms here:
+
+* https://calconnect.github.io/cc-vcard-schedulable/[CalConnect: Calendaring and scheduling -- Vocabulary (HTML)]
+
+== General
+
+This document specifies the (TITLE).
+
+The document is published as the following:
+
+* CalConnect CC (DOCNUMBER)
+* ISO (DOCNUMBER)
+* IETF draft-cc-vcard-schedulable
+
+
+== Fetching the document
+
+[source,sh]
+----
+git clone https://github.com/CalConnect/cc-vcard-schedulable/
+----
+
+
+== Installing build tools
+
+See https://www.metanorma.com/author/topics/install/
+
+
+== Running via Docker or locally
+
+If you have installed the build tools locally, and wish to run the
+locally-installed compilation tools, there is nothing further to set.
+
+If you don't want to deal with local dependencies, use the docker:
+
+[source,sh]
+----
+docker run -v "$(pwd)":/metanorma -w /metanorma -it metanorma/mn metanorma site generate --agree-to-terms
+----
+
+
+== Building the document
+
+[source,sh]
+----
+metanorma site generate --agree-to-terms
+----
+
+The generated documents are accessible under `_site/`.
+
+
+== Iterating the document
+
+[source,sh]
+----
+metanorma site generate --agree-to-terms
+open _site/index.html
+----
+
+
+// == IETF: Checking against idnits
+
+// https://tools.ietf.org/tools/idnits/[idnits] is the RFC checking tool prior to
+// submissions.
+
+// [source,sh]
+// ----
+// idnits draft-calconnect-vobject-vformat.nits
+// ----
+
+
+== License
+
+Copyright its respective authors and CalConnect.
