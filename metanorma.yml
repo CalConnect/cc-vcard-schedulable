@@ -2,7 +2,7 @@
 metanorma:
   source:
     files:
-      - sources/cc-56004.adoc
+      - sources/cc-58012.adoc
       - sources/draft-vcard-schedulable.adoc
 
   collection:
