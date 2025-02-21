@@ -1,0 +1,8 @@
+[[security]]
+== Security Considerations
+
+As this document only defines schema for representing entities for
+calendaring and scheduling and does not refer to the actual storage
+mechanism itself, or the calendaring and scheduling protocol, no
+special security considerations are required as part of this
+document.

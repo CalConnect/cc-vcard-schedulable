@@ -1,0 +1,35 @@
+[[iana]]
+== IANA Considerations
+
+=== New VCard Objectclass Value Registration
+
+A objectclass value is be defined according to the process specified
+in Section 10.2.6 of <<RFC6350>>.
+
+=== VCard Property and Value Registration
+
+The following new VCard Properties need to be registered by IANA.
+
+.New VCard Properties Table
+|===
+|VCard Property Name |VCard Property Definition
+
+| AUTOSCHEDULE        | <<auto>>
+| BOOKINGINF*         | <<bookinfo>>
+| BOOKINGRESTRICTED   | <<restricted>>
+| BOOKINGWINDOWSTART  | <<windowstart>>
+| BOOKINGWINDOWEND    | <<windowend>>
+| MAXINSTANCES        | <<maxinstances>>
+| MULTIBOOK           | <<multibook>>
+
+|===
+
+The following new VCard Parameter Values need to be registered by
+IANA.
+
+.New VCard Properties Table
+|===
+|VCard Property Name |VCard Parameter Name |VCard Parameter Value
+
+|RELATED |TYPE | schedule-admin <<reltypevals>>
+|===

@@ -1,0 +1,44 @@
+[[schedulable_objectclass_value]]
+== Schedulable Objectclass Value
+
+This specification defines a new value for the OBJECTCLASS property
+deined in [TODO]. The value is registered according to the procedure
+in Section 10.2.6 of <<RFC6350>>.
+
+Value:: schedulable
+
+Purpose:: To specify the entity with this objectclass is schedulable.
+
+Conformance  This value MAY be used with the OBJECTCLASS property.
+If used the properties, parameters and values of the vcard MUST
+conform to the requirements of this specification.
+
+Example:: OBJECTCLASS:schedulable
+
+
+[[current_properties]]
+== Current vCard Properties for use with OBJECTCLASS:schedulable.
+
+The following properties MUST be specified in a vCard representing a
+calendaring or schedulable resource:
+
+* FN
+
+* UID
+
+The following properties SHOULD be specified in a vCard representing
+a calendaring or schedulable resource:
+
+* KIND
+
+* CALADRURI or EMAIL
+
+[[res_caladr]]
+=== CALADRURI
+
+The CALADRURI value is the address that would be used by a Scheduling
+and Calendaring application to schedule the resource.
+
+Its value MUST be a uri string, in most cases a mailto: uri.  The
+EMAIL property value of the resource should be used for scheduling,
+in the absence of this property.

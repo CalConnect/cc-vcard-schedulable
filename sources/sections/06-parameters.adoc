@@ -1,0 +1,14 @@
+[[paramvals]]
+== New Parameter Values
+
+[[reltypevals]]
+=== RELATED TYPE Values
+
+
+This document specifies the following additional values that can be
+used as the value for the TYPE parameter of the RELATED property
+defined in Section 6.6.6 of <<RFC6350>>.
+
+* schedule-admin: an entity that performs scheduling approval, when
+scheduling the entity associated with this vCard, if approval
+required.

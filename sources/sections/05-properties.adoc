@@ -1,0 +1,239 @@
+[[new_properties]]
+
+== New vCard Properties for use with OBJECTCLASS:schedulable.
+
+The following new properties MAY be used with
+OBJECTCLASS:schedulable.
+
+Format and cardinality of new vCard properties are defined as
+described in Section 3.3 of <<RFC6350>>.
+
+[[auto]]
+=== AUTOSCHEDULE
+
+Purpose:: Specify if the resource is automatically scheduled with no
+approval process.
+
+ValueType:: Text value from the auto schedule values table.
+
+Cardinality:: *1
+
+ABNF::
+[source,abnf]
+----
+AUTOSCHEDULE-param = "VALUE=text" / any-param
+AUTOSCHEDULE-value = text
+----
+
+Default value:: If the property is absent or unknown, resource
+bookings are auto accepted, if it does not result in a booking
+conflict and auto declined if it does.
+
+Default value:: AUTO
+
+Example value:: AUTO
+
+.Auto Schedule Values Table
+|===
+|Auto schedule value |Scheduling action
+
+| NONE              | no auto scheduling
+| ACCEPT-IF-FREE    | auto accept invitations, if no conflict
+| DECLINE-IF-BUSY| auto decline invitations that result in a conflict
+| AUT* | auto accept and auto decline based on booking conflict
+| ALWAYS-ACCEPT     | auto accept all invitations
+| ALWAYS-DECLINE    | auto decline all invitations
+|===
+
+[[bookinfo]]
+=== BOOKINGINFO
+
+Purpose:: Provide the complete information on scheduling a resource
+if access rights are set or approval is required.
+
+ValueType:: URI value.  It MAY also be a free-form text value.
+
+Cardinality:: *
+
+ABNF::
+[source,abnf]
+----
+BOOKINGINFO-param = "VALUE=" ("text" / "uri") /
+                     any-param
+BOOKINGINFO-value = uri / text
+----
+
+Default value:: None
+
+Example value:: http://www.example.com/room1_booking.html
+
+[[bookrestrict]]
+=== BOOKINGRESTRICTED
+
+Purpose:: Specify if there are restrictions to booking the
+resource specified by access rights in the system.
+More information is provided by the BOOKINGINFO
+<<bookinfo>> property.
+
+ValueType:: Boolean value.
+
+Cardinality:: *1
+
+ABNF::
+[source,abnf]
+----
+BOOKINGRESTRICTED-param = "VALUE=boolean" / any-param
+BOOKINGRESTRICTED-value = boolean
+----
+
+Default value:: FALSE.
+
+Absence of this property indicates no restriction to
+booking the resource.
+
+Example value:: TRUE
+
+[[bwin_start]]
+=== BOOKINGWINDOWSTART
+
+Purpose:: Defines how much time in advance the resource can be
+booked.
+
+ValueType:: Duration value.
+
+The format is based on the <<ISO.8601.2004>>
+duration representation basic format with designators
+for the duration of time.
+The format can represent nominal durations (weeks and days) and accurate
+durations (hours, minutes, and seconds).
+The syntax is further defined in Appendix A, "Duration" section of
+<<RFC3339>>.
+
+Cardinality:: *1
+
+ABNF::
+[source,abnf]
+----
+BOOKINGWINDOWSTART-param = "VALUE=text" / any-param
+BOOKINGWINDOWSTART-value = text
+----
+
+Special Notes:: The value of this property is used to calculate the
+earliest date and time when a resource can be reserved
+for an event starting on a specific date and time.
+
+If this property value is defined, the resource may be
+booked for an event at a certain time, only if the
+current time is equal to or after the date and time
+calculated by subtracting this value from the event's
+proposed start time. If this property is absent, then
+the resource may be booked at any time before the end of
+the booking window.
+
+Default value:: None
+
+Example value:: P3M
+
+[[bwin_end]]
+=== BOOKINGWINDOWEND
+
+Purpose:: Defines how much time in advance the resource booking is
+closed.
+
+ValueType:: Duration value.
+
+The format is based on the <<ISO.8601.2004>>
+duration representation basic format with designators
+for the duration of time.
+The format can represent nominal durations (weeks and days) and accurate
+durations (hours, minutes, and seconds).
+The syntax is further defined in Appendix A, "Duration" section of
+<<RFC3339>>.
+
+Cardinality:: *1
+
+ABNF::
+[source,abnf]
+----
+BOOKINGWINDOWEND-param = "VALUE=text" / any-param
+BOOKINGWINDOWEND-value = text
+----
+
+Special Notes:: The value of this property is used to calculate the
+latest date and time when a resource can be reserved for an event starting on
+a specific date and time.
++
+If the current time is equal to or before the value obtained by
+subtracting BookingWindowEnd from the start date and time of the
+event, then the resource may be booked. If this property is absent,
+then the resource may be booked anytime from booking window start
+to the start of the event.
++
+BookingWindow Start and End together provide the window of time a
+resource can be booked, relative to the start time of the event.
++
+[source]
+----
+If: BookingWindowStart = BwS,
+    BookingWindowEnd = BwE,
+    Current Time = CT and
+    Event Start Time = ST,
+Then a resource can be booked at a certain time only if
+    CT is equal to or after (ST - BwS)
+    and CT is equal to or before (ST - BwE)
+----
+
+Default value:: None
+
+Example value:: P5D
+
+[[max_inst]]
+=== MAXINSTANCES
+
+Purpose:: Maximum number of instances of an event, the resource
+can be scheduled for from NOW.
+
+ValueType:: Integer value.
+
+Cardinality:: *1
+
+ABNF::
+[source,abnf]
+----
+MAXINSTANCES-param = "VALUE=integer" / any-param
+MAXINSTANCES-value = integer
+----
+
+Special Notes:: Value of 0 indicates no limits. Value of 1 indicates
+that no recurring bookings are allowed. If this property
+is absent there is no limit to the number of instances
+it may be booked for at any moment.
+
+Default value:: 0
+
+Example value:: 60
+
+[[multibook]]
+=== MULTIBOOK
+
+Purpose:: Number of simultaneous bookings allowed.
+
+ValueType:: Integer value.
+Value of 0 indicates no limits.
+
+Cardinality:: *1
+
+ABNF::
+[source,abnf]
+----
+MULTIBOOK-param = "VALUE=integer" / any-param
+MULTIBOOK-value = integer
+----
+
+Special Notes:: Value of 0 indicates no limits. If this property is
+absent the resource may be booked only for one event at
+a particular moment.
+
+Default value:: 1
+
+Example value:: 1
