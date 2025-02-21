@@ -1,0 +1,15 @@
+[[introduction]]
+== Introduction
+
+The schedulable object class defines a number of properties which are
+required or useful for schedulable entities.
+
+A schedulable entity may be scheduled for meetings (usually a person)
+or for use (usually a resource).  The properties specified here allow
+a client to discover such an entity and initiate a scheduling
+request.
+
+Some of the properties and values may be used by calendar servers to
+determine the appropriate action when a scheduling request is
+received.  For example, do we auto-accept the request if the entity
+is available?

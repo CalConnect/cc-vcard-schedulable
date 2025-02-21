@@ -6,17 +6,28 @@ image:https://github.com/CalConnect/cc-vcard-schedulable/workflows/generate/badg
 
 This document is available in its rendered forms here:
 
-* https://calconnect.github.io/cc-vcard-schedulable/[CalConnect: Calendaring and scheduling -- Vocabulary (HTML)]
+* https://calconnect.github.io/cc-vcard-schedulable/[CalConnect: Schedulable Objectclass for vCard]
 
 == General
 
-This document specifies the (TITLE).
+This document defines a new objectclass value "schedulable" for vCard that
+enables entities to be marked as schedulable.
+
+It includes:
+
+* Required and recommended properties for schedulable entities
+* New properties specific to scheduling functionality
+* New parameter values for existing properties
+* Recommendations for calendaring systems
+
+== Content
+
+This document specifies the vCard Schedulable Objectclass.
 
 The document is published as the following:
 
-* CalConnect CC (DOCNUMBER)
-* ISO (DOCNUMBER)
-* IETF draft-cc-vcard-schedulable
+* CalConnect CC 56004
+* IETF draft-vcard-schedulable
 
 
 == Fetching the document
@@ -64,15 +75,15 @@ open _site/index.html
 ----
 
 
-// == IETF: Checking against idnits
+== IETF: Checking against idnits
 
-// https://tools.ietf.org/tools/idnits/[idnits] is the RFC checking tool prior to
-// submissions.
+https://tools.ietf.org/tools/idnits/[idnits] is the RFC checking tool prior to
+submissions.
 
-// [source,sh]
-// ----
-// idnits draft-calconnect-vobject-vformat.nits
-// ----
+[source,sh]
+----
+idnits {filename}.nits
+----
 
 
 == License

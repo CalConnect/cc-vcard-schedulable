@@ -1,0 +1,10 @@
+
+[bibliography]
+== Normative references
+
+* [[[ISO.8601.2004,ISO 8601:2004]]]
+* [[[RFC2119,RFC 2119]]]
+* [[[RFC2739,RFC 2739]]]
+* [[[RFC3339,RFC 3339]]]
+* [[[RFC4589,RFC 4589]]]
+* [[[RFC6350,RFC 6350]]]
