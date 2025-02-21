@@ -1,5 +1,5 @@
 = Schedulable Objectclass for vCard
-:docnumber: 56004
+:docnumber: 58012
 :copyright-year: 2013
 :language: en
 :doctype: standard
