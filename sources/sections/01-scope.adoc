@@ -1,11 +1,11 @@
 [[scope]]
 == Scope
 
-This document specifies a new objectclass value for vCard that enables entities to be marked as schedulable. It defines:
+//This document specifies a new objectclass value for vCard that enables entities to be marked as schedulable. It defines:
 
-* A new objectclass value "schedulable"
-* Required and recommended properties for schedulable entities
-* New properties specific to scheduling functionality
-* New parameter values for existing properties
+//* A new objectclass value "schedulable"
+//* Required and recommended properties for schedulable entities
+//* New properties specific to scheduling functionality
+//* New parameter values for existing properties
 
-This specification is intended for use by calendar and scheduling systems that need to manage schedulable resources and entities.
+//This specification is intended for use by calendar and scheduling systems that need to manage schedulable resources and entities.

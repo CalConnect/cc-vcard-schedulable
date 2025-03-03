@@ -3,13 +3,13 @@
 
 This specification defines a new value for the OBJECTCLASS property
 deined in [TODO]. The value is registered according to the procedure
-in Section 10.2.6 of <<RFC6350>>.
+in <<RFC6350,section=10.2.6>>.
 
 Value:: schedulable
 
 Purpose:: To specify the entity with this objectclass is schedulable.
 
-Conformance  This value MAY be used with the OBJECTCLASS property.
+Conformance:: This value MAY be used with the OBJECTCLASS property.
 If used the properties, parameters and values of the vcard MUST
 conform to the requirements of this specification.
 

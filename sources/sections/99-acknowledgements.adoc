@@ -1,5 +1,5 @@
 
-[appendix,obligation=informative]
+[acknowledgments]
 == Acknowledgements
 
 This specification is a result of discussions that took place within

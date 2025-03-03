@@ -1,23 +1,6 @@
 [[terms]]
 == Terms and Definitions
 
-=== schedulable entity
-entity that can be scheduled for meetings or resource usage
-
-=== calendar user address
-address used by calendaring and scheduling applications to identify a calendar user
-
-=== booking window
-time period during which a schedulable entity can be booked
-
-=== auto-schedule
-automatic processing of scheduling requests without manual intervention
-
-=== booking restriction
-limitation on who can schedule an entity or under what conditions
-
-=== simultaneous booking
-multiple concurrent bookings of the same schedulable entity
-
-=== scheduling administrator
-person or system responsible for approving scheduling requests when required
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+document are to be interpreted as described in <<RFC2119>>.
