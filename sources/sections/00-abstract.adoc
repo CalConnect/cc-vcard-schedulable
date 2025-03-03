@@ -1,5 +1,6 @@
-[[abstract]]
-.Abstract
+[abstract]
+== Abstract
+
 This specification describes a new property objectclass value for the
 vcard objectclass property defined in [REF] allowing schedulable
 entities to be marked as such.

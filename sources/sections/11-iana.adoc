@@ -4,7 +4,7 @@
 === New VCard Objectclass Value Registration
 
 A objectclass value is be defined according to the process specified
-in Section 10.2.6 of <<RFC6350>>.
+in <<RFC6350,section=10.2.6>>.
 
 === VCard Property and Value Registration
 
@@ -16,10 +16,10 @@ The following new VCard Properties need to be registered by IANA.
 
 | AUTOSCHEDULE        | <<auto>>
 | BOOKINGINF*         | <<bookinfo>>
-| BOOKINGRESTRICTED   | <<restricted>>
-| BOOKINGWINDOWSTART  | <<windowstart>>
-| BOOKINGWINDOWEND    | <<windowend>>
-| MAXINSTANCES        | <<maxinstances>>
+| BOOKINGRESTRICTED   | <<bookrestrict>>
+| BOOKINGWINDOWSTART  | <<bwin_start>>
+| BOOKINGWINDOWEND    | <<bwin_end>>
+| MAXINSTANCES        | <<max_inst>>
 | MULTIBOOK           | <<multibook>>
 
 |===

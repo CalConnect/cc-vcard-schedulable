@@ -1,5 +1,5 @@
 = Schedulable Objectclass for vCard
-:docnumber: 58012
+:docnumber: 58011
 :copyright-year: 2013
 :language: en
 :doctype: standard
@@ -50,5 +50,3 @@ include::sections/11-iana.adoc[]
 include::sections/99-acknowledgements.adoc[]
 
 include::sections/99-cal-sys-recs.adoc[]
-
-include::sections/97-references.adoc[]

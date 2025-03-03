@@ -22,9 +22,9 @@ TENTATIVE.  Rooms SHOULD have this property defined.
 
 
 . Information from other properties, for example the capacity if a
-  resource can be used by calendaring systems to warn end users if
-  the number of attendees exceed the capacity value.  Rooms SHOULD
-  have CAPACITY defined.
+resource can be used by calendaring systems to warn end users if
+the number of attendees exceed the capacity value.  Rooms SHOULD
+have CAPACITY defined.
 
 Individual calendar servers may regard the values of these properties
 set in a directory server or a different database as advisory and

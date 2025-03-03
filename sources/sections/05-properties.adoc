@@ -6,7 +6,7 @@ The following new properties MAY be used with
 OBJECTCLASS:schedulable.
 
 Format and cardinality of new vCard properties are defined as
-described in Section 3.3 of <<RFC6350>>.
+described in <<RFC6350,section=3.3>>.
 
 [[auto]]
 === AUTOSCHEDULE
@@ -19,7 +19,8 @@ ValueType:: Text value from the auto schedule values table.
 Cardinality:: *1
 
 ABNF::
-[source,abnf]
++
+[source%unnumbered]
 ----
 AUTOSCHEDULE-param = "VALUE=text" / any-param
 AUTOSCHEDULE-value = text
@@ -40,7 +41,7 @@ Example value:: AUTO
 | NONE              | no auto scheduling
 | ACCEPT-IF-FREE    | auto accept invitations, if no conflict
 | DECLINE-IF-BUSY| auto decline invitations that result in a conflict
-| AUT* | auto accept and auto decline based on booking conflict
+| AUTO | auto accept and auto decline based on booking conflict
 | ALWAYS-ACCEPT     | auto accept all invitations
 | ALWAYS-DECLINE    | auto decline all invitations
 |===
@@ -56,7 +57,8 @@ ValueType:: URI value.  It MAY also be a free-form text value.
 Cardinality:: *
 
 ABNF::
-[source,abnf]
++
+[source%unnumbered]
 ----
 BOOKINGINFO-param = "VALUE=" ("text" / "uri") /
                      any-param
@@ -80,14 +82,15 @@ ValueType:: Boolean value.
 Cardinality:: *1
 
 ABNF::
-[source,abnf]
++
+[source%unnumbered]
 ----
 BOOKINGRESTRICTED-param = "VALUE=boolean" / any-param
 BOOKINGRESTRICTED-value = boolean
 ----
 
 Default value:: FALSE.
-
++
 Absence of this property indicates no restriction to
 booking the resource.
 
@@ -100,7 +103,7 @@ Purpose:: Defines how much time in advance the resource can be
 booked.
 
 ValueType:: Duration value.
-
++
 The format is based on the <<ISO.8601.2004>>
 duration representation basic format with designators
 for the duration of time.
@@ -112,7 +115,8 @@ The syntax is further defined in Appendix A, "Duration" section of
 Cardinality:: *1
 
 ABNF::
-[source,abnf]
++
+[source%unnumbered]
 ----
 BOOKINGWINDOWSTART-param = "VALUE=text" / any-param
 BOOKINGWINDOWSTART-value = text
@@ -121,7 +125,7 @@ BOOKINGWINDOWSTART-value = text
 Special Notes:: The value of this property is used to calculate the
 earliest date and time when a resource can be reserved
 for an event starting on a specific date and time.
-
++
 If this property value is defined, the resource may be
 booked for an event at a certain time, only if the
 current time is equal to or after the date and time
@@ -141,7 +145,7 @@ Purpose:: Defines how much time in advance the resource booking is
 closed.
 
 ValueType:: Duration value.
-
++
 The format is based on the <<ISO.8601.2004>>
 duration representation basic format with designators
 for the duration of time.
@@ -153,7 +157,8 @@ The syntax is further defined in Appendix A, "Duration" section of
 Cardinality:: *1
 
 ABNF::
-[source,abnf]
++
+[source%unnumbered]
 ----
 BOOKINGWINDOWEND-param = "VALUE=text" / any-param
 BOOKINGWINDOWEND-value = text
@@ -172,7 +177,7 @@ to the start of the event.
 BookingWindow Start and End together provide the window of time a
 resource can be booked, relative to the start time of the event.
 +
-[source]
+[source%unnumbered]
 ----
 If: BookingWindowStart = BwS,
     BookingWindowEnd = BwE,
@@ -198,7 +203,8 @@ ValueType:: Integer value.
 Cardinality:: *1
 
 ABNF::
-[source,abnf]
++
+[source%unnumbered]
 ----
 MAXINSTANCES-param = "VALUE=integer" / any-param
 MAXINSTANCES-value = integer
@@ -219,12 +225,14 @@ Example value:: 60
 Purpose:: Number of simultaneous bookings allowed.
 
 ValueType:: Integer value.
++
 Value of 0 indicates no limits.
 
 Cardinality:: *1
 
 ABNF::
-[source,abnf]
++
+[source%unnumbered]
 ----
 MULTIBOOK-param = "VALUE=integer" / any-param
 MULTIBOOK-value = integer
