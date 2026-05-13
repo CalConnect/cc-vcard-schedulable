@@ -1,3 +1,5 @@
+# metanorma.release.yml — cc-vcard-schedulable
+
 documents:
-  - source: sources/cc-58011.adoc
-  - source: sources/draft-vcard-schedulable.adoc
+  - pattern: "cc-*"
+    channels: [public/standards]
