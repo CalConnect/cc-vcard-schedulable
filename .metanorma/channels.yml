@@ -1,5 +1,0 @@
-# .metanorma/channels.yml — cc-vcard-schedulable
-
-channels:
-  - name: public/standards
-    description: "CalConnect documents from cc-vcard-schedulable"
